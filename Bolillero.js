@@ -19,7 +19,7 @@ var Bolillero = function (list) {
 	var _currentPos;
 
 	var _next = function() {
-		//if we didn't traversing the list..
+		//if we haven't finished traversing the list..
 		if (_currentPos >= 0 ) {
 			//pick a random item that we haven't picked before
 			var pos = Math.floor(Math.random() * (_currentPos));
@@ -33,10 +33,10 @@ var Bolillero = function (list) {
 			return value; 
 		}
 		else {
-			//we finished traversing the list
+			//we've finished traversing the list
 			//so we reset _currentPos, but we
 			//still need to return a value so
-			//we call ourselfves.
+			//we call ourselves.
 			_currentPos = _shuffledList.length - 1;
 			return _next();
 		}

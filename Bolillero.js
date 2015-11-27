@@ -8,7 +8,7 @@ var Bolillero = function (list) {
 		//and put it in the shuffled list.
 		//Repeat until the unshuffled list is empty
 		while (_unshuffled.length) {
-			_currentPos = Math.floor(Math.random() * (_unshuffled.length -1));
+			_currentPos = Math.floor(Math.random() * (_unshuffled.length));
 			_shuffled.push(_unshuffled[_currentPos]);
 			_unshuffled.splice(_currentPos,1);
 		}
